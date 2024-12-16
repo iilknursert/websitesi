@@ -1,0 +1,339 @@
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Sayfa genelinde kullanılacak fontları tanımlar */
+    margin: 0; /* Varsayılan margin değerini sıfırlar */
+    padding: 0; /* Varsayılan padding değerini sıfırlar */
+    background-color: #f0f0f0; /* Arka plan rengini açık gri yapar */
+    overflow-x: hidden; /* Yatay kaydırmayı engeller */
+}
+
+header {          
+    position: sticky; /* Sayfanın kaydırılması durumunda sabit kalır */
+    top: 0; /* Üstten sıfır konumda sabitler */
+    background-color: #010E26; /* Arka plan rengini koyu mavi yapar */
+    z-index: 1000; /* Diğer öğelerin üzerine çıkması için yüksek bir z-index değeri veriyoruz */
+    padding: 20px 0; /* Üst ve alt padding değerini 20 piksel yapar */
+}
+
+header nav ul {
+    text-align: center; /* Menüyü ortalar */
+    list-style-type: none; /* Liste işaretlerini kaldırır */
+    padding: 0; /* Varsayılan padding değerini sıfırlar */
+    margin: 0; /* Varsayılan margin değerini sıfırlar */
+    margin-top: 10px; /* Üstten 10 piksel boşluk bırakır */
+}
+
+header nav ul li {
+    display: inline-block; /* Liste elemanlarını yan yana dizer */
+    margin-right: 1rem; /* Sağdan 1rem boşluk bırakır */
+}
+
+header nav ul li:not(:last-child)::after {
+    content: '|'; /* Son eleman hariç diğerlerinin sonuna dikey çizgi ekler */
+    margin-left: 1rem; /* Soldan 1rem boşluk bırakır */
+    color: #fff; /* Çizgi rengini beyaz yapar */
+}
+
+header nav ul li a {
+    color: #fff; /* Link rengini beyaz yapar */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+}
+
+header nav ul li a:hover {
+    color: #ccc; /* Link üzerine gelindiğinde rengini açık gri yapar */
+}
+
+.main-section {
+    padding: 100px 20px; /* Üstten ve alttan 100 piksel, yanlardan 20 piksel boşluk bırakır */
+    background-image: url(https://cdn.pixabay.com/photo/2017/06/09/22/56/lady-justice-2388500_960_720.jpg); /* Arka plan resmi ekler */
+    background-size: cover; /* Resmi kapsayacak şekilde ölçeklendirir */
+    background-position: center; /* Resmi ortalar */
+    position: relative; /* Göreceli konumlandırma */
+    color: #fff; /* Metin rengini beyaz yapar */
+    height: 100vh; /* Yüksekliği tam ekran yapar */
+    display: flex; /* Flexbox düzeni uygular */
+    flex-direction: column; /* Flexbox yönünü sütun yapar */
+    justify-content: center; /* İçeriği dikeyde ortalar */
+    z-index: 1; /* Arka planın üzerine çıkmasını sağlar */
+}
+
+.main-section h1 {
+    margin-top: -200px; /* Üstten -200 piksel boşluk bırakır */
+    font-size: 4rem; /* Font boyutunu 4 rem yapar */
+    margin-bottom: -10px; /* Alttan -10 piksel boşluk bırakır */
+    text-align: right; /* Metni sağa hizalar */
+    margin-right: 20px; /* Sağdan 20 piksel boşluk bırakır */
+}
+
+.main-section p {
+    margin-top: px; /* Üstten boşluk bırakmaz (boş değer) */
+    font-size: 3rem; /* Font boyutunu 3 rem yapar */
+    margin-bottom: -10px; /* Alttan -10 piksel boşluk bırakır */
+    text-align: right; /* Metni sağa hizalar */
+    margin-right: 20px; /* Sağdan 20 piksel boşluk bırakır */
+}
+
+.b {
+    background-color: #031740; /* Arka plan rengini koyu mavi yapar */
+    color: #fff; /* Metin rengini beyaz yapar */
+    padding: 15px 0; /* Üstten ve alttan 15 piksel boşluk bırakır */
+    text-align: center; /* Metni ortalar */
+    position: relative; /* Göreceli konumlandırma */
+    z-index: 2; /* İçeriğin üzerine çıkmasını sağlar */
+}
+
+.b ul {
+    list-style-type: none; /* Liste işaretlerini kaldırır */
+    padding: 0; /* Varsayılan padding değerini sıfırlar */
+    margin: 0; /* Varsayılan margin değerini sıfırlar */
+    display: flex; /* Flexbox düzeni uygular */
+    justify-content: flex-start; /* Elemanları sola hizalar */
+    align-items: center; /* Elemanları ortalar */
+}
+
+.b ul li {
+    margin-right: 10px; /* Sağdan 10 piksel boşluk bırakır */
+}
+
+.b ul li:first-child {
+    margin-left: 100px; /* Soldan 100 piksel boşluk bırakır */
+    font-size: 1.2rem; /* Font boyutunu 1.2 rem yapar */
+    font-weight: bold; /* Fontu kalın yapar */
+    text-transform: uppercase; /* Metni büyük harfe çevirir */
+    margin-right: auto; /* Sağdan otomatik boşluk bırakır */
+}
+
+.b ul li:last-child a {
+    background-color: transparent; /* Arka plan rengini temizler */
+    color: #120e2b; /* Yazı rengini beyaz yapar */
+    display: flex; /* Flexbox düzeni uygular */
+    align-items: center; /* Elemanları ortalar */
+    padding: 5px 15px; /* İç boşluklar ekler */
+    border-radius: 30px; /* Kenarları yuvarlar */
+    background-color: #ffffffc3; /* Arka plan rengini yarı saydam beyaz yapar */
+    color: #031740; /* Yazı rengini koyu mavi yapar */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+}
+
+.b ul li:last-child a i {
+    color: #ffffff; /* İkon rengini beyaz yapar */
+    margin-right: 20px; /* Sağdan 20 piksel boşluk bırakır */
+}
+
+.b ul li:last-child a:hover {
+    text-align: center;
+    background-color: #024f0f; /* Üzerine gelindiğinde arka plan rengini değiştirir */
+    color: #024f0f; /* Yazı rengini değiştirir */
+    box-shadow: 5px 5px 5px rgba(246, 246, 246, 0.625); /* Işığın yansıması için gölge efekti ekler */
+    background-color: rgba(90, 248, 164, 0.795); /* Üzerine gelindiğinde hafif bir arka plan rengi ekler */
+    color: #f3f3f3; /* Yazı rengini değiştirir */
+}
+
+.b ul li:last-child {
+    margin-left: auto; /* Sağa yaslanmış hale getirir */
+    margin-right: 70px; /* Sağdan 70 piksel boşluk bırakır */
+}
+
+.b ul li:not(:first-child) a {
+    color: #fff; /* Diğer linklerin rengini beyaz yapar */
+    text-decoration: none; /* Link altı çizgiyi kaldırır */
+}
+
+#about {
+    border-radius: 50px; /* Kenarları yuvarlar */
+    display: flex; /* Flexbox düzeni uygular */
+    justify-content: space-between; /* İçeriği dağıtır */
+    align-items: flex-start; /* Elemanları başa hizalar */
+    padding: 50px; /* İç boşluklar ekler */
+    margin-top: 50px; /* Üstten 50 piksel boşluk bırakır */
+    margin-bottom: 50px; /* Alttan 50 piksel boşluk bırakır */
+    width: 80%; /* Genişliği %80 yapar */
+    margin-left: auto; /* Soldan otomatik boşluk bırakır */
+    margin-right: auto; /* Sağdan otomatik boşluk bırakır */
+    height: 500px; /* Yüksekliği 500 piksel yapar */
+}
+
+#about>div {
+    box-shadow: 2px 2px 15px rgba(12, 3, 71, 0.858); /* Gölge efekti ekler */
+    background-color: #ffffff; /* Arka plan rengini beyaz yapar */
+    width: 45%; /* Genişliği %45 yapar */
+    box-sizing: border-box; /* Kenar dolgusunu kutuya dahil eder */
+    padding: 20px; /* İç boşluklar ekler */
+    border: 3px solid #031740; /* Kenar çizgisi ekler */
+    border-radius: 50px; /* Kenarları yuvarlar */
+    overflow: hidden
+
+; /* Taşan içeriği gizler */
+    height: 100%; /* Yüksekliği %100 yapar */
+    margin-top: 10px; /* Üstten 10 piksel boşluk bırakır */
+}
+
+#about h2 {
+    text-shadow: 2px 2px 15px rgba(12, 3, 71, 0.858); /* Metne gölge efekti ekler */
+    border: rgba(12, 3, 71, 0.858); /* Sınır çizer */
+    border-radius: 5px; /* Kenarları yuvarlar */
+    color: #0d0532; /* Metin rengini koyu mor yapar */
+    position: absolute; /* Mutlak konumlandırma */
+    font-size: 50px; /* Font boyutunu 50 piksel yapar */
+    font-weight: bold; /* Fontu kalın yapar */
+    margin-top: -60px; /* Üstten -60 piksel boşluk bırakır */
+    text-align: center; /* Metni ortalar */
+}
+
+#about>div p {
+    font-weight: bold; /* Metni kalın yapar */
+    display: flex; /* Flexbox düzeni uygular */
+    justify-content: center; /* Metni yatayda ortalar */
+    align-items: center; /* Metni dikeyde ortalar */
+    font-size: xx-small; /* Font boyutunu çok küçük yapar */
+    margin-bottom: 10px; /* Alttan 10 piksel boşluk bırakır */
+    line-height: 15px; /* Satır yüksekliğini 15 piksel yapar */
+    margin-top: 10px; /* Üstten 10 piksel boşluk bırakır */
+}
+
+#about>div:last-child img {
+    border-radius: 15px; /* Kenarları yuvarlar */
+    max-width: 90%; /* Maksimum genişliği %90 yapar */
+    margin-left: auto; /* Soldan otomatik boşluk bırakır */
+    margin-right: auto; /* Sağdan otomatik boşluk bırakır */
+}
+
+/* Sosyal medya linkleri için */
+.social-links {
+    display: flex; /* Flexbox düzeni uygular */
+    justify-content: center; /* Linkleri ortalar */
+    width: 100%; /* Genişliği %100 yapar */
+    margin-top: 20px; /* Üstten 20 piksel boşluk bırakır */
+}
+
+.social-links a {
+    color: #031740; /* Link rengini koyu mavi yapar */
+    margin: 10px; /* Etrafına 10 piksel boşluk bırakır */
+    font-size: 1.5rem; /* Font boyutunu 1.5 rem yapar */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+}
+
+.social-links a:hover {
+    color: #7c57b7; /* Link üzerine gelindiğinde rengini değiştirir */
+}
+
+/* Ekran küçüldüğünde alt alta geçmeleri için */
+@media (max-width: 1000px) {
+    #about {
+        flex-direction: column; /* Flex yönünü sütun yapar */
+        height: 1100px; /* Yüksekliği 1100 piksel yapar */
+    }
+    
+    #about p { 
+        height: 380px; /* Paragrafların yüksekliğini 380 piksel yapar */
+    }
+
+    #about>div {
+        width: 100%; /* Genişliği %100 yapar */
+        margin: 20px; /* Etrafına 20 piksel boşluk bırakır */
+    }
+}
+
+/* Ekranı aşağı indirme çubuğunun stili */
+::-webkit-scrollbar {
+    width: 10px; /* Genişlik */
+    background-color: #021230; /* Arka plan rengi */
+}
+
+/* İndirme çubuğu kaydırma kolu */
+::-webkit-scrollbar-thumb {
+    background-color: #3c5c9c8e; /* Kaydırma kolu rengi */
+    border-radius: 6px; /* Kenar yuvarlaklığı */
+}
+
+/* Kaydırma kolu hover efekti */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #2c84ff8a; /* Kaydırma kolu hover rengi */
+}
+
+/* Haber bülteni kısmı tasarımı */
+#haberBulteni {
+    padding: 50px 20px; /* İç boşluklar ekler */
+    text-align: center; /* Metni ortalar */
+}
+
+#haberBulteni h2 {
+    text-shadow: 2px 2px 15px rgba(12, 3, 71, 0.858); /* Metne gölge efekti ekler */
+    color: #031740; /* Metin rengini koyu mavi yapar */
+    font-size: 3rem; /* Font boyutunu 3 rem yapar */
+    margin-bottom: 30px; /* Alttan 30 piksel boşluk bırakır */
+}
+
+.haber-bulteni {
+    display: flex; /* Flexbox düzeni uygular */
+    flex-wrap: wrap; /* Elemanları sarar */
+    justify-content: center; /* Elemanları ortalar */
+}
+
+.haber-kutucuk {
+    box-shadow: 2px 2px 15px rgba(12, 3, 71, 0.858); /* Gölge efekti ekler */
+    border-radius: 50px; /* Kenarları yuvarlar */
+    border: 3px solid #031740; /* Kenar çizgisi ekler */
+    background-color: #fff; /* Arka plan rengini beyaz yapar */
+    padding: 50px; /* İç boşluklar ekler */
+    width: calc(33.33% - 20px); /* Genişliği %33.33 eksi 20 piksel yapar */
+    margin-bottom: 20px; /* Alttan 20 piksel boşluk bırakır */
+    cursor: pointer; /* Fare işaretçisini el işareti yapar */
+    transition: transform 0.3s ease; /* Dönüşüm geçiş süresi ve stili */
+    display: flex; /* Flexbox düzeni uygular */
+    flex-direction: column; /* Flex yönünü sütun yapar */
+    align-items: center; /* Elemanları ortalar */
+}
+
+.haber-kutucuk:hover {
+    transform: translateY(-10px); /* Hover durumunda yukarı kaydırır */
+    box-shadow: 10px 10px 10px rgba(58, 50, 133, 0.625); /* Hover durumunda gölge efekti ekler */
+    transition: transform 0.3s ease; /* Dönüşüm geçiş süresi ve stili */
+}
+
+.haber-kutucuk {
+    opacity: 1; /* Tamamen belirgin yapar */
+}
+
+/* Aktif haber kutucuğu */
+.haber-kutucuk.active {
+    opacity: 1; /* Aktif kutucuk tamamen belirgin olacak */
+}
+
+.haber-kutucuk img {
+    border: #031740; /* Kenar çizgisi ekler */
+    bottom: auto; /* Alt konumunu otomatik yapar */
+    cursor: pointer; /* Fare işaretçisini el işareti yapar */
+    width: 80%; /* Fotoğrafı %80 genişlik yapar */
+    height: auto; /* Yüksekliği otomatik yapar */
+    margin-bottom: 10px; /* Başlıktan biraz mesafe bırakır */
+}
+
+.haber-kutucuk h3 {
+    margin-top: 0; /* Başlık için üst boşluk sıfıra ayarlandı */
+    font-size: 16px; /* Font boyutunu 16 piksel yapar */
+    color: #031740; /* Metin rengini koyu mavi yapar */
+    text-align: center; /* Başlığı ortalar */
+}
+
+.haber-kutucuk p {
+    font-size: 14px; /* Açıklamayı küçültür */
+    text-align: center; /* Açıklamayı ortalar */
+    margin-top: 10px; /* Açıklamadan fotoğrafa biraz mesafe bırakır */
+}
+
+/* Geçiş butonu stili */
+.gecis-butonu {
+    background-color: transparent; /* Arka plan rengini temizler */
+    border: none; /* Kenar çizgisini kaldırır */
+    text-shadow: 2px 2px 15px rgb(12, 3, 71); /* Metne gölge efekti ekler */
+    color: #031740; /* Metin rengini koyu mavi yapar */
+    font-size: 30px; /* Font boyutunu 30 piksel yapar */
+    cursor: pointer; /* Fare işaretçisini el işareti yapar */
+    outline: none; /* Kenar çizgisini kaldırır */
+    margin-top: 20px; /* Üstten 20 piksel boşluk bırakır */
+}
+
+.gecis-butonu:hover {
+    color: #5509d1; /* Hover durumunda rengini değiştirir */
+}
